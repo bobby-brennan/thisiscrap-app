@@ -23,7 +23,7 @@ var Reviews = React.createClass({
     return {reviews: []};
   },
   componentDidMount: function() {
-    $.get('/api/reviews', function(reviews) {
+    $.get(HOST + '/api/reviews', function(reviews) {
       this.setState({
         reviews: reviews,
       })
