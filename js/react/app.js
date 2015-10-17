@@ -49,8 +49,12 @@ var App = React.createClass({
   },
 
   componentDidMount: function() {
-    var el = $('.geosuggest input')
-    el.addClass('form-control');
+    var input = $('.geosuggest input')
+    input.addClass('form-control');
+    
+    var results = $('.geosuggest ul');
+    results.addClass('nav nav-pills')
+
     var self = this;
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
